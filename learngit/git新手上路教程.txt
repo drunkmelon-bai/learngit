@@ -1,0 +1,23 @@
+git新手上路教程
+一、安装git并注册账号邮箱
+官网下载安装git，安装完成后打开git bash，输入git config --global user.name 'baikang'
+git config --global user.email 'email@qq.com',该邮箱需要与GitHub的注册邮箱相同，方便后续的数据同步
+
+二、获取本地的ssh公钥并添加到GitHub中
+cd ~/.ssh
+vim id_rsa.pub获取其中的内容将其添加到GitHub账号的ssh key中
+
+三、本地文件添加到版本库
+在本地建立文件夹learngit，在此文件下打开git bash，输入 git init，会生成.git目录，该目录就是版本库
+然后再创建文件 readme.txt,先git add readme.txt到暂存区，然后git commit -m 'first commit' 提交到版本库
+
+四、本地版本库首次推送到远程仓库
+1、假设本地工作区为learngit，则先在GitHub上建一个同名仓库
+2、本地仓库关联远程仓库
+git remote add origin git@github.com:drunkmelon-bai/learngit.git
+3、首次推送本地代码到远程(注意加-u 参数)
+git push -u origin(这是远程仓库默认名称) master(这是默认分支)
+4、之后新增加或者修改的文件操作
+git add 文件名
+git commit -m 'message'
+git push origin master

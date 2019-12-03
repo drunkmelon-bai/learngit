@@ -21,3 +21,22 @@ git push -u origin(这是远程仓库默认名称) master(这是默认分支)
 git add 文件名
 git commit -m 'message'
 git push origin master
+
+五、远程仓库clone到本地
+1、找到想要clone的仓库地址
+2、进入本地工作区打开git bash，输入git clone 远程地址
+
+六、分支管理
+实际工作中都需要有自己的分支，先commit到本地分支再push到远程分支，最后再申请merge到主干
+1、创建分支
+git branch dev 
+2、切换分支
+git checkout dev
+3、push本地代码到远程分支
+add+commit+push
+4、创建合并请求
+
+七、git操作指南
+1、git bash
+2、git 小乌龟工具
+3、IDEA 安装git插件
